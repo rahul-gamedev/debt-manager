@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+// const font = font({ subsets: ["latin"] });
+const font = Roboto({
+  weight: ["100","300", "400", "500", "700"],
+  subsets: ["latin"],
+  fallback: ["Helvetica", "sans-serif"],
+});
 
 export const metadata: Metadata = {
-  title: "Debt Buddy",
+  title: "Debt Manager",
   description: "",
 };
 
@@ -16,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={font.className}>{children}</body>
     </html>
   );
 }
