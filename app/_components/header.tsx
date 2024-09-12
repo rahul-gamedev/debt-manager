@@ -1,3 +1,0 @@
-// logo
-// search
-// user details
