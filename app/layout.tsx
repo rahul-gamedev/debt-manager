@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import "./globals.css";
-import { ResizablePanelGroup, ResizablePanel } from "@/components/ui/resizable";
+import {
+  ResizablePanelGroup,
+  ResizablePanel,
+  ResizableHandle,
+} from "@/components/ui/resizable";
 import NavBar from "./_components/navBar";
 import Dashboard from "./_components/dashboard";
 import SideBar from "./_components/sidebar";
@@ -32,8 +36,8 @@ export default function RootLayout({
               </div>
             </ResizablePanel>
             {/* <ResizableHandle /> */}
-            <ResizablePanel defaultSize={80}>
-              <div className="bg-white m-6 px-14 py-8 rounded-3xl drop-shadow-md">
+            <ResizablePanel defaultSize={100}>
+              <div className="bg-white m-6  px-14 py-8 rounded-3xl drop-shadow-md">
                 {children}
               </div>
             </ResizablePanel>
